@@ -11,7 +11,7 @@ module.exports = {
       if (!req.value) { req.value = {}; }
       req.value['body'] = result.value;
       next();
-    }
+    };
   },
 
   schemas: {
