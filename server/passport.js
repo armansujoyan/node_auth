@@ -9,7 +9,7 @@ const { JWT_SECRET } = require('./config');
 passport.use(new JwtStrategy({
   jwtFromRequest: ExtractJwt.fromHeader('authorization'),
   secretOrKey: JWT_SECRET,
-}, async (payload, done) => {
+}, async (payload, done) => { // eslint-disable-line consistent-return
   try {
     const user = await User.findById(payload.sub);
 
@@ -26,7 +26,7 @@ passport.use(new JwtStrategy({
 passport.use(new LocalStrategy({
   usernameField: 'email',
   passwordField: 'password',
-}, async (email, password, done) => {
+}, async (email, password, done) => { // eslint-disable-line consistent-return
   try {
     const user = await User.findOne({ email });
 

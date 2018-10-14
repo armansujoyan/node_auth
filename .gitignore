@@ -34,3 +34,7 @@ npm-debug.log
 
 # Local env file with credentials
 .env
+
+#Reports
+__tests__/report
+.nyc_output
