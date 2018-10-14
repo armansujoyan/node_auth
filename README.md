@@ -5,6 +5,7 @@ Basic authentication starter created with Node, Express, Passport and bcrypt usi
 ```
 /users/signup - New user registration
 /users/signin - User sign in
+/users/oauth/google - Authentication route for Google
 /users/secret - Protected route for authentication check.
 ```
 
@@ -45,3 +46,7 @@ All the tests of the project are located in ```__tests___```  folder. The projec
 2. ```yarn report``` - Generate the report in ```__tests__/report``` folder.
 3. ```yarn text-report``` - Generate the report in the text format
 4. ```yarn nyc``` - Run tests and generate reoprt
+
+## Configuring OAuth
+
+In order to configure OAuth authentication routes, you need to provide secret and id token of corresponding 3-rd party apps in the config file, which is located in ```config/index.js```.
