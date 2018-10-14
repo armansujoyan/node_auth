@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === 'test') {
 const app = express();
 
 // Middleware
-if (!process.env.NODE_ENV === 'test') {
+if (!(process.env.NODE_ENV === 'test')) {
   app.use(morgan('dev'));
 }
 app.use(bodyParser.json());
